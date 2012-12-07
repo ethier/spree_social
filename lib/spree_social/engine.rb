@@ -36,7 +36,7 @@ module SpreeSocial
  #       puts("[Spree Social] Loading #{auth_method.provider.capitalize} as authentication source")
       end
     end
-    self.setup_key_for(provider.to_sym, key, secret)
+    #self.setup_key_for(provider.to_sym, key, secret)
   end
 
 #  def self.setup_key_for(provider, key, secret)
