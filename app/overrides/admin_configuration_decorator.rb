@@ -7,5 +7,5 @@ Deface::Override.new(:virtual_path => "spree/admin/shared/_configuration_menu",
 Deface::Override.new(:virtual_path => "spree/admin/configurations/index",
                      :name => "add_social_providers_to_configuration_menu",
                      :insert_bottom => "[data-hook='admin_configurations_menu']",
-                     :partial => "spree/admin/shared/configurations_menu",
+                     :text => "<%= configurations_menu_item(I18n.t('social_authentication_methods'), admin_authentication_methods_path, I18n.t('social_authentication_methods_description')) %>",
                      :disabled => false)
