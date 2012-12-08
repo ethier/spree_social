@@ -40,9 +40,8 @@ module SpreeSocial
   end
 
   def self.setup_key_for(provider, key, secret)
-    Rails.application.config.middleware.use OmniAuth::Builder do
-      provider provider, key, secret,
-               :scope => 'email,read_stream,read_friendlists', :auth_type => 'https'
+    Devise.setup do |config|
+      config.omniauth provider, key, secret
     end
   end
 end
