@@ -1,3 +1,6 @@
+This is a customized version of the Spree Social gem for a specific project. It adds some additional omniauth scopes to the initializer. You might not want to use it for your project.
+
+
 SpreeSocial
 ===========
 [![Build Status](https://travis-ci.org/spree/spree_social.png)](https://travis-ci.org/spree/spree_social)
