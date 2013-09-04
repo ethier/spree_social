@@ -41,7 +41,7 @@ module SpreeSocial
 
   def self.setup_key_for(provider, key, secret)
     Devise.setup do |config|
-      config.omniauth provider, key, secret, { :auth_type => 'https', :provider_ignores_state => true }, :setup => true
+      config.omniauth provider, key, secret, :setup => true
     end
   end
 end
