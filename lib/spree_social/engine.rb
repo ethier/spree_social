@@ -41,7 +41,7 @@ module SpreeSocial
 
   def self.setup_key_for(provider, key, secret)
     Devise.setup do |config|
-      config.omniauth provider, key, secret, {:auth_type => 'https', :scope => 'email,read_friendlists' }
+      config.omniauth provider, key, secret, {:auth_type => 'https' }#, :scope => 'email,read_friendlists' }
     end
   end
 end
