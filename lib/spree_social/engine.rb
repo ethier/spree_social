@@ -33,7 +33,7 @@ module SpreeSocial
       if auth_method.provider == provider
         key = auth_method.api_key
         secret = auth_method.api_secret
-        #puts("[Spree Social] Loading #{auth_method.provider.capitalize} as authentication source")
+        #Rails.logger.info("[Spree Social] Loading #{auth_method.provider.capitalize} as authentication source")
       end
     end
     self.setup_key_for(provider.to_sym, key, secret)
@@ -41,7 +41,7 @@ module SpreeSocial
 
   def self.setup_key_for(provider, key, secret)
     Devise.setup do |config|
-      config.omniauth provider, key, secret, {:auth_type => 'https', :provider_ignores_state => true } #, :scope => 'email,read_friendlists', :provider_ignores_state => true }
+      config.omniauth provider, key, secret, :setup => true
     end
   end
 end
